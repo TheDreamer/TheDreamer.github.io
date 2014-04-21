@@ -1,0 +1,21 @@
+name: The Beastie Blog
+timezone: America/Chicago
+permalink: pretty
+pygments: true
+lsi: false
+paginate: 25
+markdown: rdiscount
+rdiscount:
+  extensions: [smart]
+owner:
+  long_name: Lawrence "The BSD Dreamer" Chen
+  name: Lawrence "The Dreamer" Chen
+  gravatar: 46c4c604abcf0a670346206dc9608a7e
+  email: beastie@tardisi.com
+  twitter: LawrenceChen
+  blog: http://lawrencechen.net
+  gallery: http://tardisi.com
+  apn: http://apnarcoplexic.com
+  github: TheDreamer
+# Since GH overrides this, use to detect testing
+safe: false
