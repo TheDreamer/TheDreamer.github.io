@@ -104,9 +104,9 @@ header {
     display:block;
     text-align: left;
     float: right;
-    line-height: 80px;
+    line-height: 35px;
     margin-top: 50px;
-    font-family: georgia, serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     text-rendering: optimizelegibility;
   }
   header ul.navigation li {
