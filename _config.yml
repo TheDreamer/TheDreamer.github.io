@@ -8,6 +8,8 @@ markdown: rdiscount
 rdiscount:
   extensions:
     - smart
+gems:
+  - jemoji
 owner:
   long_name: Lawrence "The BSD Dreamer" Chen
   name: Lawrence "The Dreamer" Chen
