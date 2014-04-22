@@ -6,7 +6,8 @@ lsi: false
 paginate: 25
 markdown: rdiscount
 rdiscount:
-  extensions: [smart]
+  extensions:
+    - smart
 owner:
   long_name: Lawrence "The BSD Dreamer" Chen
   name: Lawrence "The Dreamer" Chen
