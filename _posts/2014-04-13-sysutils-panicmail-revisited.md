@@ -14,7 +14,7 @@ Decided to remove the kernel.symbols stuff from /usr/local/etc/rc.d/panicmail
 and patch /usr/sbin/crashinfo to use kernel.symbols if detected or specified
 on commandline with kgdb.
 
-{% highlight udiff %}
+{% highlight udiff linenos %}
 --- crashinfo.orig	2013-10-05 23:02:24.907006000 -0500
 +++ crashinfo	2014-04-13 14:14:10.435929691 -0500
 @@ -31,7 +31,7 @@
