@@ -10,6 +10,7 @@
     <link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" media="screen, projection" href="/res/screen.css" type="text/css">
     <link rel="stylesheet" media="print" href="/res/print.css" type="text/css">
+    <link rel="stylesheet" href="/res/solarized-light.css" type="text/css">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@LawrenceChen">
@@ -52,13 +53,13 @@
       {{ content }}
     <!--/div-->
     
-    {% if paginator.page %}
+    {% if paginator.total_pages > 1 %}
     <div id="paginator" class="content">
       {% if paginator.next_page %}
-      <a href="/page{{ paginator.next_page }}/">Older entries</a>
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older entries</a>
       {% endif %}
       {% if paginator.previous_page %}
-      <a href="/page{{ paginator.previous_page }}/">Newer entries</a>
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Newer entries</a>
       {% endif %}
     </div>
     {% endif %}

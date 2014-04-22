@@ -6,12 +6,13 @@ layout: default
   {% for post in site.posts limit:25 %}<a
     href="{{ post.url }}" class="post-excerpt{% if post.photo_url %} photo{% endif %}">
       <div class="padded-content">
+        <div class="categories">{{ post.categories }}</div>
         <div class="title">{{ post.title }}</div>
       {% if post.photo_url %}
         <div class="image" style="background-image:url('{{ post.photo_url }}')"></div>
       {% else %}
         <!-- <div class="title">{{ post.title }}</div> -->
-        <info datetime="{{ page.date | date: "%Y-%m-%d" }}">
+        <info datetime="{{ post.date | date: "%Y-%m-%d" }}">
           {{ post.date | date: "%b %Y" }}
         </info>
         {% if post.description %}
@@ -46,24 +47,19 @@ layout: default
     }
   });
 })(function(){
-  var winw = window.innerWidth, w; //, width_thresholds = [680, 780];
+  var winw = window.innerWidth, w; //, width_thresholds = [800, 1280];
   w = window.__post_grid_width;
 
-  if ( (w !== undefined) &&
-       ( (w === 680 && winw < 680) ||
-         (w === 880 && winw >= 680 && winw < 880) ||
-         (w === 10000 && winw >= 880)
-       )
-     )
+  if ( (w !== undefined) && (w === 800 && winw < 800) )
   {
     // console.log('noop w:', w+ ', winw:', winw);
     return;
   } else {
     window.__post_grid_width = w =
-      winw > 880 ? 10000 :
-      winw > 680 ? 880 :
-                   680;
-    // console.log('op w:', w);
+      winw > 1280 ? 10000 :
+      winw > 800 ? 1280 :
+                   800;
+    // console.log('op w:', w+ ', winw:', winw);
   }
 
   var posts = document.getElementById('recent-posts');
@@ -71,13 +67,13 @@ layout: default
       col_width, col0_y, col1_y, col1_x,
       origin = {x:0, y:0}, node_count = 0, is_col0, row0_max_y;
 
-  posts.style.position = (window.__post_grid_width <= 680) ? null : 'relative';
+  posts.style.position = (window.__post_grid_width <= 800) ? null : 'relative';
 
   for (k in child_nodes) {
     node = child_nodes[k];
     if (node.nodeType === Node.ELEMENT_NODE) {
       if (node.className === 'breaker') {
-        if (window.__post_grid_width <= 680) {
+        if (window.__post_grid_width <= 800) {
           node.style.height = null;
         } else {
           node.style.height = (Math.max(col0_y, col1_y) - row0_max_y) + 'px';
@@ -98,7 +94,7 @@ layout: default
             row0_max_y = col1_y;
           }
         } else {
-          if (window.__post_grid_width <= 680) {
+          if (window.__post_grid_width <= 1280) {
             // console.log('Clear');
             node.style.position = null;
             node.style.width = null;
