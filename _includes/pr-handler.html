@@ -1,0 +1,31 @@
+<script type="text/javascript">
+function addEvent(evType, f) {
+  if (window.addEventListener){
+    window.addEventListener(evType, f, false);
+    return true;
+  } else if (window.attachEvent){
+    var r = window.attachEvent("on"+evType, f);
+    return r;
+  } else {
+    return false;
+  }
+}
+addEvent('load', function() {
+  var pElements = document.getElementsByClassName('body');
+
+  var pElement = pElements.item(0);
+  var pHText = pElement.innerHTML;
+  var myRegExp = /PR: ([^\/]+\/\d+)/;
+  var myMatch = myRegExp.exec(pHText);
+
+  console.log('myMatch: ', myMatch);
+  console.log('myMatch: ', myMatch[1]);
+
+  var myReplace = "PR: <a href=\"http://www.freebsd.org/cgi/query-pr.cgi?pr=" + myMatch[1] + "\" target=\"_blank\">" + myMatch[1] + "</a>";
+
+  console.log('myReplace: ', myReplace);
+
+  var pReplaced = pHText.replace(myRegExp, myReplace);
+  pElement.innerHTML = pReplaced;
+});
+</script>
