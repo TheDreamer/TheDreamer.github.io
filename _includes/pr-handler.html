@@ -18,14 +18,11 @@ addEvent('load', function() {
   var myRegExp = /PR: ([^\/]+\/\d+)/;
   var myMatch = myRegExp.exec(pHText);
 
-  console.log('myMatch: ', myMatch);
-  console.log('myMatch: ', myMatch[1]);
+  if (myMatch) {
+    var myReplace = "PR: <a href=\"http://www.freebsd.org/cgi/query-pr.cgi?pr=" + myMatch[1] + "\" target=\"_blank\">" + myMatch[1] + "</a>";
 
-  var myReplace = "PR: <a href=\"http://www.freebsd.org/cgi/query-pr.cgi?pr=" + myMatch[1] + "\" target=\"_blank\">" + myMatch[1] + "</a>";
-
-  console.log('myReplace: ', myReplace);
-
-  var pReplaced = pHText.replace(myRegExp, myReplace);
-  pElement.innerHTML = pReplaced;
+    var pReplaced = pHText.replace(myRegExp, myReplace);
+    pElement.innerHTML = pReplaced;
+  }
 });
 </script>
