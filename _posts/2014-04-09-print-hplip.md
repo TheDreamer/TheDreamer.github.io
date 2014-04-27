@@ -3,7 +3,6 @@ title: Various issues with hplip with cups-1.7+
 layout: post
 comments: yes
 category: patches
-not_pretty: yes
 ---
 
 This port's LIB_DEPENDS is testing for a library that is no longer part of
