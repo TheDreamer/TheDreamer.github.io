@@ -4,6 +4,7 @@ description: "Recently, I had yet another panic.  Couldn't remember how I had ex
 layout: post
 comments: yes
 category: patches
+not_pretty: yes
 ---
 
 Recently, I had yet another panic.  Couldn't remember how I had examined the
