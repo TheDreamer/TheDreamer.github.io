@@ -8,7 +8,7 @@
   var m,lang_re = /^#\!-([a-zA-Z0-9_-]+)\n/;
   for (i=0,L=v.length;i<L;++i) {
     n = v.item(i);
-    if ((cn = n.firstChild) && cn.nodeName == 'CODE') {
+    if ((cn = n.firstChild) && cn.nodeName == 'CODE' && cn.getAttribute("class") == null) {
       lang = null;
       if (cn.firstChild.nodeType === Node.TEXT_NODE) {
         m = lang_re.exec(cn.firstChild.nodeValue);
