@@ -21,6 +21,23 @@ desktop would differ from the email I use for FreeBSD related correspondence.
 Initially, I made the tweaks by hand and then coded up a CFE3 promise to
 recreate it on my other FreeBSD servers.
 
+{% highlight cfengine3 linenos %}
+bundle edit_line add_panicmail_sendfrom
+{
+insert_lines:
+
+        ": $(const.dollar){panicmail_sendfrom:=\"root\"}"
+                location => after("^: \\$\{panicmail_sendto:=.*");
+
+replace_patterns:
+
+        "From: root"
+                replace_with =>
+                        AllWith("From: $(const.dollar){panicmail_sendfrom}");
+
+}
+{% endhighlight %}
+
 Then, I started to set things up for possible PR submission to send up my
 *enhancements*.  But, as I was doing that, I thought up other enhancements
 and it got a little out of hand.  Now, I'm not sure I want to send it up....
