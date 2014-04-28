@@ -4,7 +4,6 @@ description: "Recently, I had yet another panic.  Couldn't remember how I had ex
 layout: post
 comments: yes
 category: patches
-not_pretty: yes
 ---
 
 Recently, I had yet another panic.  Couldn't remember how I had examined the
@@ -23,6 +22,7 @@ Initially, I made the tweaks by hand and then coded up a CFE3 promise to
 recreate it on my other FreeBSD servers.
 
 {% highlight cfengine3 linenos %}
+#!-none
 bundle edit_line add_panicmail_sendfrom
 {
 insert_lines:
@@ -45,21 +45,17 @@ and it got a little out of hand.  Now, I'm not sure I want to send it up....
 
 new `rc.conf(.local)` entries (with defaults):
 
-{% highlight sh %}
-panicmail_autonotify="YES"
-panicmail_sendfrom="root"
-panicmail_usecrashinfo="NO"
-panicmail_usekernel=""
-{% endhilight %}
+    panicmail_autonotify="YES"
+    panicmail_sendfrom="root"
+    panicmail_usecrashinfo="NO"
+    panicmail_usekernel=""
 
 `panicmail_autonotify` -- sets whether you want to be cc'd when
 `panicmail_autosubmit="YES"`.
 
 `panicmail_sendfrom` -- change From: to be something other than root.  I use:
 
-{% highlight sh %}
-panicmail_sendfrom="Lawrence Chen <beastie@tardisi.com>"
-{% endhighlight %}
+    panicmail_sendfrom="Lawrence Chen <beastie@tardisi.com>"
 
 `panicmail_usecrashinfo` -- if set to "YES", **crashinfo(8)** instead of just
 a kgdb backtrace.
