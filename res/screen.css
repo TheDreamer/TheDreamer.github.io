@@ -208,6 +208,7 @@ div.content.photo {
     background-color:transparent;
     border:none;
     border-radius: none;
+    font-weight: bold;
   }
   div.content pre > code {
     padding:0;
