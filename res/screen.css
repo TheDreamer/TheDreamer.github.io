@@ -203,6 +203,12 @@ div.content.photo {
     border-radius: 3px;
     padding:0 0.3em;
   }
+  div.content code.archive {
+    padding:0;
+    background-color:transparent;
+    border:none;
+    border-radius: none;
+  }
   div.content pre > code {
     padding:0;
     background-color:transparent;
