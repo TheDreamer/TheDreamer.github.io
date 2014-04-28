@@ -45,7 +45,7 @@ and it got a little out of hand.  Now, I'm not sure I want to send it up....
 
 new `rc.conf(.local)` entries (with defaults):
 
-{% highlight shell %}
+{% highlight sh %}
 panicmail_autonotify="YES"
 panicmail_sendfrom="root"
 panicmail_usecrashinfo="NO"
@@ -57,7 +57,7 @@ panicmail_usekernel=""
 
 `panicmail_sendfrom` -- change From: to be something other than root.  I use:
 
-{% highlight shell %}
+{% highlight sh %}
 panicmail_sendfrom="Lawrence Chen <beastie@tardisi.com>"
 {% endhighlight %}
 
