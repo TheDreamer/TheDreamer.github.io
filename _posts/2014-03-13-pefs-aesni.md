@@ -1,6 +1,6 @@
 ---
 title: Giving sysutils/pefs-kmod a try
-descriptiion: "So, I decided to give PEFS a try.  After loading the module, I noticed a message in dmesg.  Later I wondered if my work machine had an i7 with AESNI.  So, I tried loading that module..."
+description: "So, I decided to give PEFS a try.  After loading the module, I noticed a message in dmesg.  Later I wondered if my work machine had an i7 with AESNI.  So, I tried loading that module..."
 layout: post
 comments: yes
 category: patches
