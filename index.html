@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="posts">
   <div class="content full-bleed" id="recent-posts">
-  {% for post in site.posts limit:20 %}<a
+  {% for post in paginator.posts %}<a
     href="{{ post.url }}" class="post-excerpt{% if post.photo_url %} photo{% endif %}">
       <div class="padded-content">
         <div class="categories">{{ post.categories }}</div>
