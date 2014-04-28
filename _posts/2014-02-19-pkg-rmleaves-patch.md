@@ -1,5 +1,6 @@
 ---
 title: "pkg_rmleaves always says to resize termainl to at least 80x24"
+description: "Everytime that I've tried this program, it always fails with 'Dialog Error, try to resize your terminal to at least 80x24.'  But, my terminal window is 80x24, and changing the size doesn't make any difference.  Finally, I looked deeper..."
 layout: post
 comments: yes
 category: patches
