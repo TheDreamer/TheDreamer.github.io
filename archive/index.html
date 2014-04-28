@@ -43,7 +43,7 @@ search_field.addEventListener('blur', function (ev) {
 <ul>
 {% for post in site.posts %}
   <li>
-    <code class="archive">{{ post.date | date: "%b %d, %Y"  }}</code> &mdash; <a href="{{ post.url }}">{{ post.title }}</a> &mdash; {{ post.category }}
+    <code class="archive">{{ post.date | date: "%b %d, %Y"  }}</code> &mdash; <a href="{{ post.url }}">{{ post.title }}</a> &ndash; {{ post.category }}
   </li>
 {% endfor %}
 </ul>
