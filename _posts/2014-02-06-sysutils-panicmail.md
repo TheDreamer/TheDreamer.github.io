@@ -22,7 +22,6 @@ Initially, I made the tweaks by hand and then coded up a CFE3 promise to
 recreate it on my other FreeBSD servers.
 
 {% highlight cfengine3 linenos %}
-#!-none
 bundle edit_line add_panicmail_sendfrom
 {
 insert_lines:
