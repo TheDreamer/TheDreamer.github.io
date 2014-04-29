@@ -1,5 +1,6 @@
 ---
 title: "revisiting gmirror(8) says to use rc.early which is no longer available"
+description: "All of a sudden, my FreeBSD system at work has been panic'ng.  But no crash dumps getting saved.  Evidently, the proposed fix through dumpon isn't sufficient.  Perhaps this quick patch to savecore is needed as well..."
 layout: post
 comments: yes
 category: patches
@@ -59,6 +60,9 @@ Perhaps this additional patch I whipped up today will solve it:
  
  load_rc_config $name
 {% endhighlight %}
+
+Meanwhile, I recompiled all the kernel modules from ports to see if that's
+the reason.
 
 PR: docs/178818
 
