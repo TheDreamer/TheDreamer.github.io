@@ -4,7 +4,6 @@ description: "Due to the library version of libxml2 being brought in line with w
 layout: post
 comments: yes
 category: patches
-not_pretty: yes
 ---
 
 Due to this entry in `/usr/ports/UPDATING`

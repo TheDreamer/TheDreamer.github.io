@@ -3,7 +3,6 @@ title: revisiting the hacking of sysutils/panicmail
 layout: post
 comments: yes
 category: patches
-not_pretty: yes
 ---
 
 After updating 9.2-RELEASE-p4, which has a kernel.symbols file.  Wonder why -p3

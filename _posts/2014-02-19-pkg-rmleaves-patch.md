@@ -4,7 +4,6 @@ description: "Everytime that I've tried this program, it always fails with 'Dial
 layout: post
 comments: yes
 category: patches
-not_pretty: yes
 ---
 
 Everytime that I've tried this program, it always fails with:

@@ -3,7 +3,6 @@ title: hacking mail/evolution to fix the annoying dialog instead of reminders
 layout: post
 comments: yes
 category: patches
-not_pretty: yes
 ---
 
 `mail/evolution` has this annoying feature, where when showing reminders from
