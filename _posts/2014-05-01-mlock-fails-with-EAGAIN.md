@@ -3,7 +3,7 @@ title: "gnome-keyring-daemon: couldn't allocate secure memory"
 description: "Keep seeing the annoying message of \"gnome-keyring-daemon: couldn't allocate secure memory to keep passwords or keys from being written to the disk\" on my FreeBSD system.  And, it continues even after I had set \"security.bsd.unprivileged_mlock=1\" back on December 20, 2013.  The default resource limit RLIMIT_MEMLOCK is 64k, which I would think is more than sufficient."
 layout: post
 comments: yes
-category: patches
+category: other
 ---
 
 Keep seeing the annoying message of _"gnome-keyring-daemon: couldn't allocate
@@ -22,7 +22,7 @@ refers to as pages.  Thinking that its Windows that did memory pages that big?
 Because most Unix/Linux systems use 4k (including my FreeBSD system), except
 for Solaris which is 8k.
 
-I tried change the constnat to 4k, but this also failed.
+I tried change the constant to 4k, but this also failed.
 
 I had skimmed the `mlock(2)` man page, where it had said:
 
