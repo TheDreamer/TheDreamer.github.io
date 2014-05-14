@@ -57,3 +57,33 @@ not sure if this fulfills that need, though there is a use for it on work
 computer.
 
 PR: ports/187620
+
+------
+
+2014-05-05 - sysutils/pefs-kmod is updated to 2014.03.31, which strangely
+contains what largely looks like this patch but with no reference to my PR.
+The audit trail for my PR only has the one entry, showing that my PR/patch
+went over to the maintainer on 2014.03.15.
+
+The difference is my patch uses the current OptionsNG for a single line of
+
+    AESNI_MAKE_ENV=   PEFS_AESNI=yes
+
+The difference is my patch uses the current OptionsNG of AESNI_MAKE_ENV,
+while the released update converts this single line into:
+
+    .include <bsd.port.options.mk>
+
+    .if ${PORT_OPTIONS:MAESNI}
+    MAKE_ENV+=      PEFS_AESNI=yes
+    .endif
+
+Do I sound bitter?  Perhaps, but over which issue?  The lack of attribution
+or that it got redone as non-OptionsNG.  :disappointed: 
+
+Many of my previous PRs which were implemented the same way as existing
+options, got committed by changing them to the OptionsNG way without
+updating the existing options to it.  But, pretty much all of them
+acknowledged my PR directly or indirectly.
+
+While this port had no existing options, so no reason to go backwards ??? :confused:
