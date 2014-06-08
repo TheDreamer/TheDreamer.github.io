@@ -17,3 +17,13 @@ was going to need stuff to build first.
 However, I then found a different port (`graphics/aeskulap`) that did what I wanted, so I haven't tried running this port.
 
 So, will I submit a PR about these two ports?
+
+------
+
+**2014-06-08**  I had snuck past me that on June 5th, this port was updated to 3.8.1, but caught my attention today that
+it was being updated to 3.8.1_1.  The patch I had done is still missing, but it didn't cause me any problems because a
+while back I had changed the portmaster options on my home desktop to not remove build-only dependencies at the end.
+
+Since I've been updating the bundle that patches my FreeBSD ports today, I added promises to patch the Makefile for
+`math/octave` and `math/octave-forge`.  OTOH, since I'm not using any of these ports, perhaps I should just purge them
+from my system.
