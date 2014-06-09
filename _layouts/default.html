@@ -56,10 +56,10 @@
     {% if paginator.total_pages > 1 %}
     <div id="paginator" class="content">
       {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older entries</a>
+      <a id="older" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older entries</a>
       {% endif %}
       {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Newer entries</a>
+      <a id="newer" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Newer entries</a>
       {% endif %}
     </div>
     {% endif %}

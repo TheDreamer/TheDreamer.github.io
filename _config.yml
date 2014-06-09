@@ -3,7 +3,7 @@ timezone: America/Chicago
 permalink: pretty
 pygments: true
 lsi: false
-paginate: 25
+paginate: 20
 markdown: rdiscount
 rdiscount:
   extensions:
