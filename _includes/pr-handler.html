@@ -15,14 +15,23 @@ addEvent('load', function() {
 
   var pElement = pElements.item(0);
   var pHText = pElement.innerHTML;
-  var myRegExp = /PR: ([^\/]+)\/(\d+)/;
-  var myMatch = myRegExp.exec(pHText);
+  var myRegExpO = /PR: ([^\/]+)\/(\d+)/;
+  var myMatchO = myRegExpO.exec(pHText);
 
-  if (myMatch) {
-    var myReplace = "PR: <a href=\"https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=" + myMatch[2] + "\" target=\"_blank\">" + myMatch[1] + "/" + myMatch[2] + "</a>";
+  var myRegExpN = /PR: (\d+)/;
+  var myMatchN = myRegExpN.exec(pHText);
 
-    var pReplaced = pHText.replace(myRegExp, myReplace);
-    pElement.innerHTML = pReplaced;
+  if (myMatchO) {
+    var myReplaceO = "PR: <a href=\"https://bugs.FreeBSD.org/bugzilla/show_bug.cgi?id=" + myMatchO[2] + "\" target=\"_blank\">" + myMatchO[1] + "/" + myMatchO[2] + "</a>";
+
+    var pReplacedO = pHText.replace(myRegExpO, myReplaceO);
+    pElement.innerHTML = pReplacedO;
+  }
+  if (myMatchN) {
+    var myReplaceN = "PR: <a href=\"https://bugs.FreeBSD.org/bugzilla/show_bug.cgi?id=" + myMatchN[1] + "\" target=\"_blank\">" + myMatchN[1] + "</a>";
+
+    var myReplacedN = pHText.replace(myRegExpN, myReplaceN);
+    pElement.innerHTML = pReplacedN;
   }
 });
 </script>
