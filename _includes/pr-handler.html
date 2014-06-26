@@ -30,7 +30,7 @@ addEvent('load', function() {
   if (myMatchN) {
     var myReplaceN = "PR: <a href=\"https://bugs.FreeBSD.org/bugzilla/show_bug.cgi?id=" + myMatchN[1] + "\" target=\"_blank\">" + myMatchN[1] + "</a>";
 
-    var myReplacedN = pHText.replace(myRegExpN, myReplaceN);
+    var pReplacedN = pHText.replace(myRegExpN, myReplaceN);
     pElement.innerHTML = pReplacedN;
   }
 });
