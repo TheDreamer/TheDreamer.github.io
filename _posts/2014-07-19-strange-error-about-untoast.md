@@ -6,8 +6,8 @@ comments: yes
 category: patches
 ---
 
-Got a strange error, while troubleshooint something else likely unrelated,
-about `/usr/local/bin/tcat` and `/usr/local/bin/untoast`.
+Got a strange error, while troubleshooint something else likely unrelated, about `/usr/local/bin/tcat` and
+`/usr/local/bin/untoast`.
 
 Examining the files, I found:
 

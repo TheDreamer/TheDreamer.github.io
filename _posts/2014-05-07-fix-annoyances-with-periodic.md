@@ -80,7 +80,7 @@ corresponding host type.
 Where `$(g.lk)` is the username of my account.  I had switched to using a global variable, since I had envisioned the
 possibility of using my home CFEngine to help manage my workstations at work.  Though not sure its going to ever happen.
 I want there to be only one authoritative source of masterfiles (currently my subversion repository, but plans are to
-convert to my own git repository.  Had set one up following "[Installing Git and Gitweb on FreeBSD _at unix-heaven.org_](1), which is the same site I used when getting start with CFEngine.
+convert to my own git repository.  Had set one up following "[Installing Git and Gitweb on FreeBSD _at unix-heaven.org_](http://unix-heaven.org/node/43), which is the same site I used when getting start with CFEngine.
 
 But, I broke it and haven't had time to see what's wrong.  Have also been looking to see about using a different web
 interface, and using different servers to run on.  Perhaps doing replication and CARP.  Unless I find an alternative way of
@@ -116,5 +116,3 @@ was syncing these directories to `orac` as an additional part of my backup strat
 data elsewhere that I'm trying to track down.  For example, I have recovered my Intellipap data...though I discovered
 recently that the machine only saves about 3 months of detailed data...since I went for a year before doing a download
 from my machine.  Wonder if I'm too compliant on CPAP now.
-
-[1](http://unix-heaven.org/node/43)
