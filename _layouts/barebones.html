@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>{{ page.title }}</title>
     <link rel="shortcut icon" href="/favicon.ico">
-    <style type="text/css" media="screen">
+    <style type="text/css" media="screen" class="theme" id="light" disabled="disabled">
       body {
         background:#fdf6e3; color:#073642;
         font:13px georgia, serif;
@@ -15,14 +15,31 @@
       }
       div.breaker { clear:both; }
       img { border:none; vertical-align:bottom; }
-      hr { height:1px; border:none; background-color:#9ea1a1; }
+      hr { height:1px; border:none; background-color:#93a1a1; }
       h1,h2,h3,h4 {
         font-family: 'Helvetica Neue', helvetica, sans-serif;
         -webkit-font-smoothing: antialiased;
       }
     </style>
+    <style type="text/css" media="screen" class="theme" id="dark">
+      body {
+        background:#002b36; color:#eee8d5;
+        font:13px georgia, serif;
+        line-height:1.4;
+        font-weight: lighter;
+        text-rendering: optimizelegibility;
+      }
+      div.breaker { clear:both; }
+      img { border:none; vertical-align:bottom; }
+      hr { height:1px; border:none; background-color:#586e75; }
+      h1,h2,h3,h4 {
+        font-family: 'Helvetica Neue', helvetica, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+    {% include toggle-solarized.html %}
   </head>
-  <body>
+  <body onload="set_style_from_cookie()">
     {{ content }}
     {% include analytics.html %}
   </body>

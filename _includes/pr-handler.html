@@ -22,13 +22,13 @@ addEvent('load', function() {
   var myMatchN = myRegExpN.exec(pHText);
 
   if (myMatchO) {
-    var myReplaceO = "PR: <a href=\"https://bugs.FreeBSD.org/bugzilla/show_bug.cgi?id=" + myMatchO[2] + "\" target=\"_blank\">" + myMatchO[1] + "/" + myMatchO[2] + "</a>";
+    var myReplaceO = "PR: <a href=\"https://bugs.FreeBSD.org/bugzilla/show_bug.cgi?id=" + myMatchO[2] + "\" target=\"_blank\" rel=\"nofollow\">" + myMatchO[1] + "/" + myMatchO[2] + "</a>";
 
     var pReplacedO = pHText.replace(myRegExpO, myReplaceO);
     pElement.innerHTML = pReplacedO;
   }
   if (myMatchN) {
-    var myReplaceN = "PR: <a href=\"https://bugs.FreeBSD.org/bugzilla/show_bug.cgi?id=" + myMatchN[1] + "\" target=\"_blank\">" + myMatchN[1] + "</a>";
+    var myReplaceN = "PR: <a href=\"https://bugs.FreeBSD.org/bugzilla/show_bug.cgi?id=" + myMatchN[1] + "\" target=\"_blank\" rel=\"nofollow\">" + myMatchN[1] + "</a>";
 
     var pReplacedN = pHText.replace(myRegExpN, myReplaceN);
     pElement.innerHTML = pReplacedN;

@@ -8,9 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% endif %}
     <link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" media="screen, projection" href="/res/screen.css" type="text/css">
+    <link rel="stylesheet" media="screen, projection" href="/res/screen.css" type="text/css" title="light">
+    <link rel="alternate stylesheet" media="screen, projection" href="/res/screen-dark.css" type="text/css" title="dark">
     <link rel="stylesheet" media="print" href="/res/print.css" type="text/css">
-    <link rel="stylesheet" href="/res/solarized-light.css" type="text/css">
+    <link rel="stylesheet" href="/res/solarized-light.css" type="text/css" title="light">
+    <link rel="alternate stylesheet" href="/res/solarized-dark.css" type="text/css" title="dark">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@LawrenceChen">
@@ -42,8 +44,9 @@
     {% if page.include_move %}
     <script src="http://movelang.org/move.js"></script>
     {% endif %}
+    {% include toggle-solarized.html %}
   </head>
-  <body{% if page.wide_layout %} class="wide"{% endif %}>
+  <body{% if page.wide_layout %} class="wide"{% endif %} onload="set_style_from_cookie()">
     <iframe id="sidebar"></iframe>
     <header>
     <h1 class="logo" onclick="document.location.href='/';"><a href="/"><img src="/res/cu-lkc2.jpg" width="80" height="80" alt="The Dreamer"></a><span>{{ site.name }}</span></h1>
@@ -72,7 +75,7 @@
       </a>
       <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">{{ site.name }}</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://beastie.tardisi.com" property="cc:attributionName" rel="cc:attributionURL">{{ site.owner.name }}</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.  Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/TheDreamer/beastie-work" rel="dct:source">https://github.com/TheDreamer/beastie-work</a>.
       </p>
-      <p><a href="https://github.com/TheDreamer/TheDreamer.github.io" target="_blank" title="TheDreamer.github.io">Site Source</a></p>
+      <p><a href="https://github.com/TheDreamer/TheDreamer.github.io" target="_blank" title="TheDreamer.github.io" rel="nofollow">Site Source</a></p>
     </footer>
     {% endunless %}
     
