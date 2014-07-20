@@ -57,6 +57,16 @@ h3 { font-size: 180%; }
 h4 { font-size: 165%; }
 h5, h6 { font-size: 150%; }
 
+dt {
+  color:#073642;
+  margin-left: 2em;
+  margin-right: 4em;
+}
+dd {
+  margin-left: 4em;
+  margin-right: 4em;
+}
+    
 a { text-decoration:none; }
 a:link, a:active { color:#268bd2; }
 a:visited { color:#6c7ac4; }
