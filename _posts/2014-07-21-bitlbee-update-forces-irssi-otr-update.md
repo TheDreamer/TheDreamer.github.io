@@ -15,6 +15,6 @@ a v1.0.0 release (after two alpha releases.)
 
 So, I took a stab at updating this port....and eventually got to where portmaster installed it.
 
-I might need more work to become a real port update, but I'm starving....
+It might need more work to become a real port update, but I'm starving....
 
 PR: 192026
