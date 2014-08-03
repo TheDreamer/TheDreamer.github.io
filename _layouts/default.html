@@ -38,13 +38,13 @@
     {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%d" }}">
     {% endif %}
+    {% include toggle-solarized.html %}
     {% if page.title != "Archive (sidebar)" %}
     {% include sidebar_ui_controller.html %}
     {% endif %}
     {% if page.include_move %}
-    <script src="http://movelang.org/move.js"></script>
+    <script async src="http://movelang.org/move.js"></script>
     {% endif %}
-    {% include toggle-solarized.html %}
   </head>
   <body{% if page.wide_layout %} class="wide"{% endif %} onload="set_style_from_cookie()">
     <iframe id="sidebar"></iframe>
