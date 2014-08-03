@@ -1,7 +1,7 @@
 name: The Beastie Blog
 timezone: America/Chicago
 permalink: pretty
-pygments: true
+highlighter: pygments
 lsi: false
 paginate: 20
 markdown: rdiscount
