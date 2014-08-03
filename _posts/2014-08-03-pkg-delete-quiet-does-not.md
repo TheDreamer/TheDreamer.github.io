@@ -2,7 +2,7 @@
 title: "ports-mgmt/pkg (1.3.4) quiet delete doesn't"
 layout: post
 comments: yes
-category: patches
+category: other
 ---
 
 Decided that it was time to cleanup the pkg's installed on my system.  Since the other day I watched it take forever to
