@@ -55,3 +55,7 @@ index c103884..279e823 100644
 {% endhighlight %}
 
 Now the question is will I make a pull request? :pensive:
+
+------
+
+2014-08-23: Decided to go for it: [Make process_select by priority work on FreeBSD](https://github.com/cfengine/core/pull/1910)
