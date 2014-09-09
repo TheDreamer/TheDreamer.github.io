@@ -90,8 +90,8 @@ vars:
     procman.freebsd::
 
         "compilers"     slist => { "cc1", "cc1plus",
-                                   "clang", escape("clang++:"),
-                                   "gcc, escape("g++") };
+                                   "clang", escape("clang++"),
+                                   "gcc", escape("g++") };
 
 processes:
 
