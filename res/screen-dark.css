@@ -484,11 +484,15 @@ div.post {
   div.post.single th {
     background-color: #073642;
     padding: 0.3em 1em;
+    font-family: "Helvetica Narrow", sans-serif;
+    font-size: 0.875em;
   }
   div.post.single td {
     padding: 0.3em 1em;
     border-top: 1px #eee8d5 dotted;
     border-bottom: 1px #eee8d5 dotted;
+    font-family: Lucidatypewriter, Fixed, monospace;
+    font-size: 0.875em;
   }
 
 /* prettyprint */
