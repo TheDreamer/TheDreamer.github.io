@@ -69,8 +69,7 @@ The difference is my patch uses the current OptionsNG for a single line of
 
     AESNI_MAKE_ENV=   PEFS_AESNI=yes
 
-The difference is my patch uses the current OptionsNG of AESNI_MAKE_ENV,
-while the released update converts this single line into:
+While the released update converts this single line into:
 
     .include <bsd.port.options.mk>
 
