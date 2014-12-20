@@ -89,15 +89,15 @@ Info: http://lists.x.org/mailman/listinfo/xorg-devel
 
 Hmmm, I was an anti-C++ C Programmer...but I have on occasion been forced to do C++....
 
-As C++ is more strongly typed, the cast is required.  But, from an ansi-C perspective, there are basically 3 disadvantages
+As C++ is more strongly typed, the cast is required.  But, from an ANSI-C perspective, there are basically 3 disadvantages
 do using a cast.
 
-1. the cast is redundant, saves unnecessary typing.  But, it was already there so removing it resulted in unnecessary typing.
-2. may mask failure to include `stdlib.h`, which is a big problem if sizeof(int) != sizeof(void *).  Are you a good C Programmer?
-3. If the type of the pointer is changed, need to fix all `malloc` uses (unless it was cast to a `typedef`). `RegDataPtr` is a `typedef`.
+1. the cast is redundant, saves unnecessary typing.  _But, it was already there so removing it resulted in unnecessary typing._
+2. may mask failure to include `stdlib.h`, which is a big problem if sizeof(int) != sizeof(void *).  _Are you a good C Programmer?_
+3. If the type of the pointer is changed, need to fix all `malloc` uses (unless it was cast to a `typedef`). _`RegDataPtr` is a `typedef`._
 
-And, there's if its not broken, don't break it.....the fix is to add an additional test before the `malloc`, so no reason to
-mess with the `malloc`.  And, then there just seems a whole lot of other things wrong with what was said in the message.
+And, there's if its not broken, don't break it.....the fix is to add an additional test before the `malloc`, is not a reason
+to mess with the `malloc`.  And, then there just seems a whole lot of other things wrong with what was said in the message.
 
 So, I whip up a patch to `x11-servers/xorg-server/files/patch-CVE-2014-8092-3-4` and wait to see if this results in a
 successful build of `net/tigervnc` in _poudriere_.
@@ -105,7 +105,7 @@ successful build of `net/tigervnc` in _poudriere_.
 It is now about a quarter past midnight....I start to submit the PR, I first check to see if anybody else had beat me
 to the punch.  Seems the maintainer of `net/tigervnc` has submitted a patch, which was to rollback the specific part of the
 CVE-2014-8092 patch around 7:30pm.  Being some what angry about the whole thing and it being so late, I decided to submit
-my PR.
+my PR (rather than add to PR: 196118)
 
 ----------
 
@@ -114,7 +114,7 @@ fix.  As to the switch from HAL to DEVD, that will probably require some tweaks 
 that...though I'm still working through the issues with `x11/gnome3`, while contemplating switching to `x11/mate` or checking
 out `x11/cinnamon`.  Or perhaps XFCE, which is what I'm running on my remaining Ubuntu desktop (it mainly exists to run the
 BOINC projects [Radioactive@Home](http://radioactiveathome.org) and [Quake-Catcher Network Sensor Monitoring](http://qcn.stanford.edu/sensor),
-though there's also an NVidia card present so it is the only system I have left doing GPU work.
+though there's also an NVidia card present so it is the only system I have left doing GPU work.)
 
 Hopefully this big rebuild of ports goes smoothly, and I can get back to seeing about another annoyance I have with a port
 from my poudriere repo.
