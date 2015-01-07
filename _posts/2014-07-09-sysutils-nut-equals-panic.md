@@ -1,5 +1,5 @@
 ---
-title: "sysutils/nut is casuing my system to panic during boot"
+title: "sysutils/nut is causing my system to panic during boot"
 layout: post
 comments: yes
 category: other
