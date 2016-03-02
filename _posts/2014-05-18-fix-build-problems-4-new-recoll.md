@@ -52,6 +52,8 @@ PR: ports/190295
 
 -----
 
-May 30, 2014 - noticed that `deskutils/recoll` was updated yesterday, but it didn't look fixed.  Seems 'maintainer' ignored the dependency part of my patch, and then set the port to having no maintainer....
+May 30, 2014 - noticed that `deskutils/recoll` was updated yesterday, but it didn't look fixed.  Seems 'maintainer' ignored
+the dependency part of my patch, and then set the port to having no maintainer....
 
-Time to patch it with CFEngine, I suppose.... Getting to be quite a lot of ports getting patched on my systems by CFEngine, wonder if I need to break up my __freebsd__ policy bundle?
+Time to patch it with CFEngine, I suppose.... Getting to be quite a lot of ports getting patched on my systems by CFEngine,
+wonder if I need to break up my __freebsd__ policy bundle?

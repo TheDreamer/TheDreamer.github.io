@@ -472,7 +472,7 @@ div.post {
     zoom:0.87;
   }
 
-  div.post.single table, th, td {
+  div.post.single table, div.post.single th, div.post.single td {
     border: 1px solid #fdf6e3;
     border-spacing: 0px;
     border-collapse: collapse;
@@ -494,6 +494,61 @@ div.post {
     font-family: Lucidatypewriter, Fixed, monospace;
     font-size: 0.875em;
   }
+
+/* highlight - mostly reset, and then fiddling*/
+div.single.post figure {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  display: block;
+  font-family: Lucidatypewriter, Fixed, monospace;
+  font-weight: 300;
+  font-size: 12px;
+}
+div.single.post figure code, div.single.post figure span,
+div.single.post figure p, div.single.post figure pre, div.single.post figure hr,
+div.single.post figure table,
+div.single.post thead, div.single.post figure tbody, div.single.post figure tfoot,
+div.single.post figure tr, div.single.post figure td, div.single.post figure th {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+div.single.post figure p, div.single.post figure hr {
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  display: inline;
+}
+div.single.post figure pre {
+  display: inline;
+}
+div.single.post figure table {
+  border-collapse: collapse;
+  border-spacing: 0;
+/*  border: 1px solid #fdf6e3; */
+  margin-left:auto;
+  margin-right:auto;
+}
+div.single.post figure th {
+/*  border: 1px solid #fdf6e3; */
+  background-color: #073642;
+  padding: 0.3em 1em;
+  font-family: "Helvetica Narrow", sans-serif;
+  font-size: 0.875em;
+}
+div.single.post figure td {
+  padding: 0.3em 0.5em;
+  border-top: 1px #eee8d5 dotted;
+  border-bottom: 1px #eee8d5 dotted;
+  font-size: 0.875em;
+/*  font-family: Lucidatypewriter, Fixed, monospace; */
+}
+div.single.post figure td.code {
+  border-left: 1px #eee8d5 dotted;
+}
 
 /* prettyprint */
 pre { color:#fdf6e3; }

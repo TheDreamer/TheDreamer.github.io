@@ -12,7 +12,7 @@ layout: default
     <div class="body">{{ content }}</div>
     <div class="breaker"></div>
 
-  {% if page.comments and site.safe == true %}
+  {% if page.comments and site.safe == true and site.github %}
   <!-- During authoring, don't call disqus -->
     <div id="disqus_thread"></div>
     <script type="text/javascript">

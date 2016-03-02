@@ -1,15 +1,22 @@
 name: The Beastie Blog
 timezone: America/Chicago
 permalink: pretty
-highlighter: pygments
+highlighter: rouge
 lsi: false
 paginate: 20
-markdown: rdiscount
+markdown: kramdown
 rdiscount:
   extensions:
     - smart
+kramdown:
+  input: GFM
+  hard_wrap: false
 gems:
   - jemoji
+  - jekyll-paginate
+  - jekyll-coffeescript
+gist:
+  noscript: false
 owner:
   long_name: Lawrence "The BSD Dreamer" Chen
   name: Lawrence "The Dreamer" Chen
