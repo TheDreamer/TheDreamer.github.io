@@ -11,12 +11,14 @@ rdiscount:
 kramdown:
   input: GFM
   hard_wrap: false
+  math_engine: mathjax
 gems:
   - jemoji
   - jekyll-paginate
   - jekyll-coffeescript
 gist:
   noscript: false
+github: [metadata]
 owner:
   long_name: Lawrence "The BSD Dreamer" Chen
   name: Lawrence "The Dreamer" Chen
